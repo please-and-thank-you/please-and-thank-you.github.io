@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'aeonikregular';
+  src: url('aeonik-regular-webfont.woff2') format('woff2'),
+        url('aeonik-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'aeonikregular_italic';
+  src: url('aeonik-regularitalic-webfont.woff2') format('woff2'),
+        url('aeonik-regularitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'aeonikmedium';
+  src: url('aeonik-medium-webfont.woff2') format('woff2'),
+        url('aeonik-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'aeonikmedium_italic';
+  src: url('aeonik-mediumitalic-webfont.woff2') format('woff2'),
+        url('aeonik-mediumitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'aeonikblack';
+  src: url('aeonik-black-webfont.woff2') format('woff2'),
+        url('aeonik-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'aeonikblack_italic';
+  src: url('aeonik-blackitalic-webfont.woff2') format('woff2'),
+        url('aeonik-blackitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

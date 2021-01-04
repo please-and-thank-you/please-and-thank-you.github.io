@@ -1,0 +1,7 @@
+footer {
+  .legal {
+    &, a, a:visited {
+      color: var(--brandGray);
+    }
+  }
+}

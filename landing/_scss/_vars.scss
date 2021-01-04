@@ -6,6 +6,10 @@
   --brandYellow: #f8e54c;
   --brandPink: #f7ccff;
   --brandOrange: #ff5924;
+  --brandGray: #464646;
   --brandBlack: #000;
   --brandGradient: linear-gradient(45deg, #f2a685 0%,#f9e44d 50%,#93d19d 100%);
+
+  --backgroundColor: var(--brandBlack);
+  --textColor: var(--brandWhite);
 }
