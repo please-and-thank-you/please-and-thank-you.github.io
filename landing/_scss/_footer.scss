@@ -1,5 +1,11 @@
-footer {
+.site-footer {
+  .inner {
+    display: flex;
+    justify-content: space-between;
+  }
   .legal {
+    font-size: 0.6em;
+
     &, a, a:visited {
       color: var(--brandGray);
     }

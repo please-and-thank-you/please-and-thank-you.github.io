@@ -19,22 +19,23 @@
       flex-direction: column-reverse;
       justify-content: center;
       max-width: 400px;
+      padding: 0 2em;
       position: fixed;
       top: 20%;
     }
-    path {
-      fill: transparent;
-    }
-    text {
-      fill: var(--brandPink);
-      font-size: 2.7em;
-    }
     h1 {
-      font-size: 10em;
+      font-size: 10.5em;
+    }
+    .text-curve {
+      font-size: 2.7em;
+      left: 5em;
+      max-width: 5em;
+      position: absolute;
+      top: 4em;
     }
   }
   &-hero {
-    background: var(--backgroundColor) url(/assets/images/hero.jpg) no-repeat center top/contain;
+    background: var(--backgroundColor) url(/assets/images/hero.jpg) no-repeat center bottom/contain;
     height: 210vw;
     position: relative;
 
@@ -43,7 +44,8 @@
         position: sticky;
         font-size: 10em;
         margin-left: 1em;
-        top: 1em;
+        padding: 1em 0;
+        top: 0;
       }
       &-images {
         img {
@@ -56,6 +58,8 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding: 5em 0;
+    text-align: center;
 
     ul {
       margin: 0;
@@ -63,17 +67,28 @@
     }
     li {
       list-style-type: none;
+      padding: 1em 0;
     }
   }
   &-info {
     display: flex;
+    justify-content: space-between;
 
     .headline,
     .contact {
       flex: 0 0 50%;
     }
     .headline {
-      padding: 2em;
+      margin: 4em 2em 2em 5em;
+      max-width: 30em;
+
+      img {
+        margin-bottom: 6em;
+      }
+    }
+    .co-tagline {
+      color: var(--brandPink);
+      margin-bottom: 9em;
     }
     .contact {
       align-items: center;
@@ -83,8 +98,20 @@
       position: relative;
 
       .inner {
+        align-items: center;
         background-color: var(--backgroundColor);
         border-radius: 50%;
+        display: flex;
+        height: 27em;
+        justify-content: center;
+        width: 27em;
+      }
+      a {
+        font-family: aeonikmedium, sans-serif;
+        font-size: 2.4em;
+      }
+      .text-curve {
+        position: absolute;
       }
     }
   }

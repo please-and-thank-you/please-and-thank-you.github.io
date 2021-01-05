@@ -8,14 +8,7 @@ style: home
 
   <div class="section section-landing">
     <div class="inner">
-      <svg viewBox="0 0 483 209.89">
-        <path id="curve" d="M.39,93.1c136,175,432,161,483-93" transform="translate(-0.39 -0.1)"/>
-        <text width="483">
-          <textPath xlink:href="#curve">
-            Didn't your mom tell you to say...
-          </textPath>
-        </text>
-      </svg>
+      {% include curve-text.html content="Didn't your mom tell you to say..." id="header-text" %}
       <h1>Hey!</h1>
     </div>
   </div>
@@ -27,7 +20,7 @@ style: home
       you
     </h1>
   </div>
-  <div class="section section-partners">
+  <!-- <div class="section section-partners">
     <h2>Our partners</h2>
     <ul>
       <li>Endeavor</li>
@@ -36,12 +29,12 @@ style: home
       <li>Global</li>
       <li>Sony Music</li>
     </ul>
-  </div>
+  </div> -->
   <div class="section section-info">
     <div class="headline">
       <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="please & thank you">
-      <h2>New Company Headline</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum amet, quaerat numquam iure distinctio veniam commodi quis quam molestiae nobis aliquid perferendis atque tempore est ullam? Tempore ipsa doloremque adipisci.</p>
+      <h2 class="co-headline">A new company headline.</h2>
+      <p class="co-tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum amet, quaerat numquam iure distinctio veniam commodi quis quam molestiae nobis aliquid perferendis atque tempore est ullam? Tempore ipsa doloremque adipisci.</p>
       <form action="">
         <input type="text" placeholder="Enter your email for our newsletter">
       </form>
@@ -50,7 +43,7 @@ style: home
     <div class="contact">
       <div class="inner">
         <a href="mailto:hello@plsthk.com">hello@plsthk.com</a>
-        <p class="curve">General Inquiries</p>
+        {% include curve-text.html content="General Inquiries" id="email-text" %}
       </div>
     </div>
   </div>
