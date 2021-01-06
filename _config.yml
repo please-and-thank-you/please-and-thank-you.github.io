@@ -25,11 +25,13 @@ description: >- # this means to ignore newlines until "baseurl:"
 url: "https://please-and-thank-you.github.io"
 
 # Build settings
-theme: minima
+exclude:
+  - README.md
 plugins:
   - jekyll-feed
 sass:
   sass_dir: _scss
+theme: minima
 
 # Exclude from processing.
 # The following items will not be processed, by default.

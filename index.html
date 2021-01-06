@@ -30,17 +30,22 @@ style: home
       <li>Sony Music</li>
     </ul>
   </div> -->
-  <div class="section section-info">
+  <div id="section-info" class="section section-info">
     <div class="headline">
-      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="please & thank you">
-      <h2 class="co-headline">A new company headline.</h2>
-      <p class="co-tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum amet, quaerat numquam iure distinctio veniam commodi quis quam molestiae nobis aliquid perferendis atque tempore est ullam? Tempore ipsa doloremque adipisci.</p>
-      <div class="newsletter">
-        <form action="">
-          <input type="text" placeholder="Enter your email for our newsletter">
-        </form>
+      <div class="inner">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="please & thank you">
+        <h2 class="co-headline">Nice to meet you.</h2>
+        <div class="co-tagline">
+          <p>Please & Thank You is a consulting agency specializing in strategic business planning, financial & contract negotiations, profit & loss management, budgeting & cash flow optimization, and process redesign & change management for a portfolio of media & live events based companies.</p>
+          <p>Founded in 2020, Please & Thank You is Brought to you by the same folks who brought you Queue, ground(ctrl), and Wonderful Union.</p>
+        </div>
+        <div class="newsletter">
+          <form action="">
+            <input type="text" placeholder="Enter your email for our newsletter">
+          </form>
+        </div>
+        {% include footer.html %}
       </div>
-      {% include footer.html %}
     </div>
     <div class="contact">
       <div class="inner">
