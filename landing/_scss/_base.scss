@@ -3,11 +3,11 @@ body {
   color: var(--textColor);
   font-family: aeonikregular, sans-serif;
 }
-i, em {
+em {
   font-family: aeonikregular_italic, sans-serif;
 }
 
-b, strong {
+strong {
   font-family: aeonikmedium, sans-serif;
 }
 
@@ -29,9 +29,8 @@ a {
 }
 
 .text-curve {
-  path {
-    fill: transparent;
-  }
+  overflow: visible;
+
   text {
     fill: var(--brandPink);
   }
