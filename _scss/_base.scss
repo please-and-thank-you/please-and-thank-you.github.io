@@ -28,6 +28,19 @@ a {
   }
 }
 
+::-webkit-input-placeholder {
+  color: var(--textColor);
+}
+::-moz-placeholder {
+  color: var(--textColor);
+}
+:-ms-input-placeholder {
+  color: var(--textColor);
+}
+:-moz-placeholder {
+  color: var(--textColor);
+}
+
 .logo-img {
   max-width: 93px;
 }
