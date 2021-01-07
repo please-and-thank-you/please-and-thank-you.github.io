@@ -1,6 +1,12 @@
 .home {
-  > footer {
-    display: none;
+  .site-header {
+    position: absolute;
+    z-index: 9;
+  }
+  @media (min-width: $breakpoint-lg) {
+    > .site-footer {
+      display: none;
+    }
   }
 }
 
@@ -12,28 +18,36 @@
   &-landing {
     display: flex;
     justify-content: center;
-    // min-height: 40vw;
-    min-height: 70vh;
+    height: 70vh;
+    min-height: 22em;
 
     .inner {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      max-width: 400px;
-      padding: 0 2em;
       position: fixed;
-      top: 20%;
+      top: 22vh;
     }
     h1 {
-      font-size: 10.5em;
+      font-size: 8em;
     }
     .text-curve {
       font-size: 1.1em;
-      left: 12em;
+      left: 8em;
       letter-spacing: 0.1em;
       position: absolute;
-      top: 10em;
-      width: 12em;
+      top: 7.5em;
+      width: 10em;
+    }
+    @media (min-width: $breakpoint-md) {
+      h1 {
+        font-size: 10.5em;
+      }
+      .text-curve {
+        left: 11em;
+        top: 10em;
+        width: 12em;
+      }
     }
   }
   &-hero {
@@ -44,8 +58,9 @@
     .hero {
       &-callout {
         position: sticky;
-        font-size: 10em;
-        margin-left: 1em;
+        font-size: clamp(4em, 10vw, 10em);
+        line-height: 1.15;
+        margin-left: 0.8em;
         padding: 1em 0;
         top: 0;
       }
@@ -74,7 +89,17 @@
   }
   &-info {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: $breakpoint-lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @media (max-width: 991px) {
+      .site-footer {
+        display: none;
+      }
+    }
 
     .headline,
     .contact {
@@ -85,8 +110,17 @@
       justify-content: end;
 
       > .inner {
-        margin: 4em 12em 2em 5em;
-        max-width: 27em;
+        margin: 4em 2em 2em;
+
+        @media (min-width: $breakpoint-lg) {
+          max-width: 27em;
+        }
+        @media (min-width: $breakpoint-xl) {
+          margin: 4em auto 2em 5em;
+        }
+        @media (min-width: $breakpoint-xxl) {
+          margin: 4em 12em 2em 5em;
+        }
       }
       img {
         margin-bottom: 6em;
@@ -100,7 +134,7 @@
         color: var(--brandPink);
         font-size: 1.2em;
         line-height: 2;
-        margin-bottom: 9em;
+        margin-bottom: 6em;
       }
     }
     .newsletter {
@@ -111,6 +145,7 @@
       background: var(--brandGradient);
       display: flex;
       justify-content: center;
+      padding: 2.8em;
       position: relative;
 
       .inner {
@@ -122,19 +157,40 @@
         justify-content: center;
         position: relative;
         width: 27em;
+        font-size: 0.6em;
+
+        @media (min-width: $breakpoint-lg) {
+          font-size: 1em;
+          height: 27em;
+          width: 27em;
+        }
       }
       a {
         font-family: aeonikmedium, sans-serif;
         font-size: 2.4em;
       }
       .text-curve {
-        font-size: 1em;
-        left: 11em;
+        font-size: 2em;
+        left: 4.4em;
         letter-spacing: 0.1em;
         position: absolute;
-        top: 16em;
-        width: 12em;
+        top: 8em;
+        width: 7em;
+
+        @media (min-width: $breakpoint-lg) {
+          font-size: 1em;
+          left: 11em;
+          top: 16em;
+          width: 12em;
+        }
       }
     }
+    .site-footer {
+      padding: 0;
+    }
   }
+}
+.site-footer {
+  position: relative;
+  z-index: 9;
 }
