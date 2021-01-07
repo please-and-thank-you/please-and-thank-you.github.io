@@ -18,14 +18,23 @@
   margin-bottom: 7em;
 
   h1 {
-    font-size: 10.5em;
+    font-size: 4.5em;
     line-height: 1;
   }
   .text-curve {
+    bottom: -5em;
     font-size: 1.1em;
-    left: 19em;
     position: absolute;
-    top: 20em;
+    right: -2em;
     width: 10em;
+  }
+  @media (min-width: $breakpoint-md) {
+    h1 {
+      font-size: 10.5em;
+    }
+    .text-curve {
+      bottom: -6em;
+      right: 1em;
+    }
   }
 }

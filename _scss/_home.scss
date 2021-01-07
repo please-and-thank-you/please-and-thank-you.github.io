@@ -32,19 +32,19 @@
       font-size: 8em;
     }
     .text-curve {
+      bottom: -0.5em;
       font-size: 1.1em;
-      left: 8em;
       position: absolute;
-      top: 7.5em;
-      width: 10em;
+      right: -4em;
+      width: 9em;
     }
     @media (min-width: $breakpoint-md) {
       h1 {
         font-size: 10.5em;
       }
       .text-curve {
-        left: 11em;
-        top: 10em;
+        bottom: -1em;
+        right: -5em;
         width: 12em;
       }
     }
@@ -169,16 +169,16 @@
         font-size: 2.4em;
       }
       .text-curve {
+        bottom: 2em;
         font-size: 2em;
-        left: 4.4em;
+        right: 2em;
         position: absolute;
-        top: 8em;
         width: 7em;
 
         @media (min-width: $breakpoint-lg) {
+          bottom: 5em;
           font-size: 1em;
-          left: 11em;
-          top: 16em;
+          right: 4em;
           width: 12em;
         }
       }
