@@ -94,6 +94,7 @@
   &-info {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 
     @media (min-width: $breakpoint-lg) {
       flex-direction: row;
