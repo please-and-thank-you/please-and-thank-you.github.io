@@ -1,9 +1,26 @@
-.privacy-policy-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1em;
+.privacy-policy {
+  .site-header {
+    nav {
+      display: none;
+    }
+  }
+  &-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1em;
 
-  .page-title {
-    text-align: center;
+    .page-title {
+      margin-bottom: 2em;
+      text-align: center;
+    }
+  }
+  .site-footer {
+    .newsletter,
+    .inner {
+      display: none;
+    }
+    .legal {
+      @extend .privacy-policy-content;
+    }
   }
 }
