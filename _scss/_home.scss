@@ -16,17 +16,21 @@
   z-index: 1;
 
   &-landing {
+    align-items: center;
     display: flex;
     justify-content: center;
-    height: 70vh;
-    min-height: 22em;
+    height: 100vh;
 
-    .inner {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: fixed;
-      top: 22vh;
+    .greeting {
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      position: relative;
+      // top: 35vh;
+
+      // Transition starting point
+      opacity: 0;
+      transform: translateY(130px) rotate(15deg);
     }
     h1 {
       font-size: 8em;
