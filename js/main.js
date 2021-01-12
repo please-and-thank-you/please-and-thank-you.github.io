@@ -4,10 +4,10 @@ gsap.registerPlugin(ScrollTrigger);
 
   // Bring Site Header in
   gsap.from('.site-header', {
-    delay: 0.25,
-    y: '130px',
     alpha: 0,
+    delay: 0.25,
     duration: 1,
+    y: '130px',
     scrollTrigger: {
       trigger: '.site-header'
     }
@@ -15,11 +15,11 @@ gsap.registerPlugin(ScrollTrigger);
 
   // Bring Greeting in
   gsap.from('.greeting', {
-    delay: 0.25,
-    y: '130px',
-    rotate: 15,
     alpha: 0,
+    delay: 0.25,
     duration: 1,
+    rotate: 15,
+    y: '130px',
     scrollTrigger: {
       trigger: '.greeting'
     }
@@ -27,16 +27,18 @@ gsap.registerPlugin(ScrollTrigger);
 
   // Scroll Greeting out
   gsap.fromTo('.greeting', {
+    ease: 'linear',
     rotate: 0
   }, {
+    ease: 'linear',
     rotate: -15,
     scrollTrigger: {
-      trigger: '.section-hero',
-      toggleActions: 'restart none none none',
-      start: 'top 100%',
       end: 'top 0%',
+      // markers: true,
       scrub: true,
-      // markers: true
+      start: 'top 100%',
+      toggleActions: 'restart none none none',
+      trigger: '.section-hero'
     }
   });
 
@@ -57,51 +59,55 @@ gsap.registerPlugin(ScrollTrigger);
   gsap.to('.hero-background', {
     opacity: 0,
     scrollTrigger: {
-      trigger: '.section-info',
-      toggleActions: 'restart none none none',
-      start: 'top 90%',
       end: 'top 0%',
+      // markers: true,
       scrub: true,
-      // markers: true
+      start: 'top 90%',
+      toggleActions: 'restart none none none',
+      trigger: '.section-info'
     }
   });
 
   // Bring in footer logo
   gsap.from('.section-info .paty-logo', {
+    ease: 'linear',
     opacity: 0,
+    y: '-20vh',
     scrollTrigger: {
-      trigger: '.section-info',
-      toggleActions: 'restart none none none',
-      start: 'top 20%',
       end: 'top 0%',
+      // markers: true,
       scrub: true,
-      markers: true
+      start: 'top 20%',
+      toggleActions: 'restart none none none',
+      trigger: '.section-info'
     }
   });
 
   // Bring in Contact info background
   gsap.from('.contact-background', {
+    ease: 'linear',
     opacity: 0,
     scrollTrigger: {
-      trigger: '.section-info',
-      toggleActions: 'restart none none none',
-      start: 'top 90%',
       end: 'top 10%',
+      // markers: true,
       scrub: true,
-      // markers: true
+      start: 'top 90%',
+      toggleActions: 'restart none none none',
+      trigger: '.section-info'
     }
   });
 
   // Bring in Contact email address
   gsap.from('.contact-info', {
-    rotate: 90,
+    ease: 'linear',
+    rotate: 45,
     scrollTrigger: {
-      trigger: '.section-info',
-      toggleActions: 'restart none none none',
-      start: 'top 90%',
-      end: 'top 10%',
+      end: 'top 5%',
+      markers: true,
       scrub: true,
-      // markers: true
+      start: 'top 90%',
+      toggleActions: 'restart none none none',
+      trigger: '.section-info'
     }
   });
 
