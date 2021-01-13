@@ -62,13 +62,18 @@
 
     .hero {
       &-background {
-        background: var(--backgroundColor) url(/assets/images/hero.jpg) no-repeat center bottom/contain;
         position: absolute;
         height: 100%;
         left: 0;
         top: 0;
         width: 100%;
         z-index: -1;
+
+        source,
+        img {
+          max-width: 100%;
+          object-fit: contain;
+        }
       }
       &-callout {
         position: sticky;
