@@ -1,4 +1,15 @@
 .home {
+  position: relative;
+
+  .blind {
+    background-color: var(--brandBlack);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
   .site-header {
     position: absolute;
     z-index: 9;
@@ -16,17 +27,13 @@
   z-index: 1;
 
   &-landing {
+    align-items: center;
     display: flex;
     justify-content: center;
-    height: 70vh;
-    min-height: 22em;
+    height: 100vh;
 
-    .inner {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: fixed;
-      top: 22vh;
+    .greeting {
+      position: relative;
     }
     h1 {
       font-size: 8em;
@@ -50,14 +57,21 @@
     }
   }
   &-hero {
-    background: var(--backgroundColor) url(/assets/images/hero.jpg) no-repeat center bottom/contain;
     height: 210vw;
     position: relative;
 
     .hero {
+      &-background {
+        background: var(--backgroundColor) url(/assets/images/hero.jpg) no-repeat center bottom/contain;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+      }
       &-callout {
         position: sticky;
-        // font-size: 4em;
         font-size: 16vw;
         line-height: 1.15;
         margin-left: 0.8em;
@@ -118,7 +132,7 @@
         margin: 4em 2em 2em;
 
         @media (min-width: $breakpoint-lg) {
-          max-width: 27em;
+          max-width: 30em;
         }
         @media (min-width: $breakpoint-xl) {
           margin: 4em auto 2em 5em;
@@ -144,7 +158,6 @@
     }
     .contact {
       align-items: center;
-      background: var(--brandGradient);
       display: flex;
       justify-content: center;
       padding: 2.8em;
@@ -153,7 +166,7 @@
       @media (min-width: $breakpoint-lg) {
         padding: 1em;
       }
-      .inner {
+      &-info {
         align-items: center;
         background-color: var(--backgroundColor);
         border-radius: 50%;
@@ -163,12 +176,21 @@
         position: relative;
         width: 27em;
         font-size: 0.6em;
+        z-index: 9;
 
         @media (min-width: $breakpoint-lg) {
           font-size: 1em;
           height: 27em;
           width: 27em;
         }
+      }
+      &-background {
+        background: var(--brandGradient);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
       a {
         font-family: aeonikmedium, sans-serif;
