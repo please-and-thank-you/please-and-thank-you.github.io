@@ -76,12 +76,12 @@ window.addEventListener('load', (e) => {
   gsap.from('.section-info .paty-logo', {
     ease: 'linear',
     opacity: 0,
-    y: '-20vh',
+    y: '-25vh',
     scrollTrigger: {
       end: 'top 0%',
       // markers: true,
       scrub: true,
-      start: 'top 20%',
+      start: 'top 25%',
       trigger: '.section-info'
     }
   });

@@ -132,17 +132,14 @@
         margin: 4em 2em 2em;
 
         @media (min-width: $breakpoint-lg) {
-          max-width: 30em;
-        }
-        @media (min-width: $breakpoint-xl) {
-          margin: 4em auto 2em 5em;
+          max-width: 36em;
         }
         @media (min-width: $breakpoint-xxl) {
-          margin: 4em 12em 2em 5em;
+          margin: 4em 4em 2em;
         }
       }
       .paty-logo {
-        margin-bottom: 5em;
+        margin-bottom: 4em;
       }
     }
     .co {
@@ -150,10 +147,12 @@
         font-size: 2.2em;
       }
       &-tagline {
-        color: var(--brandPink);
-        font-size: 1.2em;
-        line-height: 2;
-        margin-bottom: 5em;
+        line-height: 1.7;
+        margin-bottom: 4em;
+
+        ul {
+          color: var(--brandPink);
+        }
       }
     }
     .contact {
