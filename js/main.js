@@ -95,7 +95,7 @@ window.addEventListener('load', (e) => {
       // markers: true,
       scrub: true,
       start: 'top 90%',
-      trigger: '.section-info'
+      trigger: '.contact'
     }
   });
 
@@ -108,7 +108,7 @@ window.addEventListener('load', (e) => {
       // markers: true,
       scrub: true,
       start: 'top 90%',
-      trigger: '.section-info'
+      trigger: '.contact'
     }
   });
 
