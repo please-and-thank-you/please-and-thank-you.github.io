@@ -1,6 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
-(function () {
+window.addEventListener('load', (e) => {
+
+  // Remove Blind
+  gsap.to('.blind', {
+    autoAlpha: 0
+  });
 
   // Bring Site Header in
   gsap.from('.site-header', {
@@ -37,23 +42,9 @@ gsap.registerPlugin(ScrollTrigger);
       // markers: true,
       scrub: true,
       start: 'top 100%',
-      toggleActions: 'restart none none none',
       trigger: '.section-hero'
     }
   });
-
-  // Fade in Section Hero
-  // gsap.from('.hero-background', {
-  //   opacity: 0,
-  //   scrollTrigger: {
-  //     trigger: '.section-hero',
-  //     toggleActions: 'restart none none none',
-  //     start: 'top 100%',
-  //     end: 'top 0%',
-  //     scrub: true,
-  //     // markers: true
-  //   }
-  // });
 
   // Fade out Section Hero
   gsap.to('.hero-background', {
@@ -63,8 +54,21 @@ gsap.registerPlugin(ScrollTrigger);
       // markers: true,
       scrub: true,
       start: 'top 90%',
-      toggleActions: 'restart none none none',
       trigger: '.section-info'
+    }
+  });
+
+  // Fade in Section Hero
+  gsap.from('.hero-background', {
+    ease: 'linear',
+    opacity: 0,
+    y: '-100vh',
+    scrollTrigger: {
+      end: 'top 0%',
+      // markers: true,
+      scrub: true,
+      start: 'top 100%',
+      trigger: '.section-hero'
     }
   });
 
@@ -78,7 +82,6 @@ gsap.registerPlugin(ScrollTrigger);
       // markers: true,
       scrub: true,
       start: 'top 20%',
-      toggleActions: 'restart none none none',
       trigger: '.section-info'
     }
   });
@@ -92,7 +95,6 @@ gsap.registerPlugin(ScrollTrigger);
       // markers: true,
       scrub: true,
       start: 'top 90%',
-      toggleActions: 'restart none none none',
       trigger: '.section-info'
     }
   });
@@ -103,12 +105,11 @@ gsap.registerPlugin(ScrollTrigger);
     rotate: 45,
     scrollTrigger: {
       end: 'top 5%',
-      markers: true,
+      // markers: true,
       scrub: true,
       start: 'top 90%',
-      toggleActions: 'restart none none none',
       trigger: '.section-info'
     }
   });
 
-})();
+});
