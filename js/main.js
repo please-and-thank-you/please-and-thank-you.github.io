@@ -8,7 +8,7 @@ window.addEventListener('load', (e) => {
   });
 
   // Bring Site Header in
-  gsap.from('.site-header', {
+  gsap.from('.home .site-header', {
     alpha: 0,
     delay: 0.25,
     duration: 1,

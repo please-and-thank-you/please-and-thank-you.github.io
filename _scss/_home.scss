@@ -71,8 +71,10 @@
 
         source,
         img {
+          height: 100%;
           max-width: 100%;
-          object-fit: contain;
+          object-fit: cover;
+          object-position: center;
         }
       }
       &-callout {
