@@ -23,7 +23,7 @@ window.addEventListener('load', (e) => {
     alpha: 0,
     delay: 0.25,
     duration: 1,
-    rotate: 15,
+    rotate: 20,
     y: '130px',
     scrollTrigger: {
       trigger: '.greeting'
@@ -36,7 +36,7 @@ window.addEventListener('load', (e) => {
     rotate: 0
   }, {
     ease: 'linear',
-    rotate: -15,
+    rotate: -20,
     scrollTrigger: {
       end: 'top 0%',
       // markers: true,

@@ -42,7 +42,7 @@
       bottom: -0.5em;
       font-size: 1.1em;
       position: absolute;
-      right: -4em;
+      right: -3.7em;
       width: 9em;
     }
     @media (min-width: $breakpoint-md) {
@@ -62,9 +62,10 @@
 
     .hero {
       &-background {
-        position: absolute;
         height: 100%;
         left: 0;
+        position: absolute;
+        pointer-events: none;
         top: 0;
         width: 100%;
         z-index: -1;
@@ -78,15 +79,30 @@
         }
       }
       &-callout {
+        display: flex;
         position: sticky;
         font-size: 16vw;
         line-height: 1.15;
-        margin-left: 0.8em;
         padding: 1em 0;
+        white-space: nowrap;
         top: 0;
 
         @media (min-width: $breakpoint-lg) {
           font-size: 10em;
+        }
+        // @media (min-width: 1290px) {
+        //   display: inline-block;
+        //   left: 50%;
+        //   transform: translateX(-100%);
+        // }
+        .inner {
+          display: flex;
+          flex: 0 1 50%;
+          justify-content: center;
+        }
+        h1 {
+          font-size: 1em;
+          margin: 0 2rem;
         }
       }
       &-images {
@@ -134,17 +150,17 @@
     }
     .headline {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
 
       > .inner {
         margin: 4em 2em 2em;
 
         @media (min-width: $breakpoint-lg) {
-          max-width: 36em;
+          max-width: 39em;
         }
-        @media (min-width: $breakpoint-xxl) {
-          margin: 4em 4em 2em;
-        }
+        // @media (min-width: $breakpoint-xxl) {
+          // margin: 4em 4em 2em;
+        // }
       }
       .paty-logo {
         margin-bottom: 4em;
