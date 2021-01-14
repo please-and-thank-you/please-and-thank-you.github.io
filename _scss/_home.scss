@@ -90,11 +90,6 @@
         @media (min-width: $breakpoint-lg) {
           font-size: 10em;
         }
-        // @media (min-width: 1290px) {
-        //   display: inline-block;
-        //   left: 50%;
-        //   transform: translateX(-100%);
-        // }
         .inner {
           display: flex;
           flex: 0 1 50%;
@@ -158,9 +153,6 @@
         @media (min-width: $breakpoint-lg) {
           max-width: 39em;
         }
-        // @media (min-width: $breakpoint-xxl) {
-          // margin: 4em 4em 2em;
-        // }
       }
       .paty-logo {
         margin-bottom: 4em;
