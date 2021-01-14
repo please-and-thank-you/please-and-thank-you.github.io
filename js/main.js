@@ -112,4 +112,43 @@ window.addEventListener('load', (e) => {
     }
   });
 
+  // Newsletter Submit
+  var newsletterForm = $('#mc-embedded-subscribe-form');
+
+  newsletterForm.submit(function(e) {
+    e.preventDefault();
+    var body = $('body');
+    var formData = $(this).serialize();
+
+    $.ajax({
+      type: $(this).attr('method'),
+      url: $(this).attr('action'),
+      data: formData,
+      cache: false,
+      dataType: 'json',
+      contentType: 'application/json; charset=utf-8',
+      encode: true,
+      error: function(error) {
+        // console.log(error);
+      },
+      success: function(data) {
+        if (data.result != 'success') {
+          // console.log(data.msg);
+          $('.newsletter').addClass('invalid');
+          $('.error-message').html(data.msg);
+        } else {
+          body.addClass('newsletter-success');
+
+          setTimeout(function() {
+            $('#mce-EMAIL').val('').blur();
+            $('.newsletter').removeClass('invalid');
+            body.removeClass('newsletter-success');
+          }, 3000);
+        }
+      }
+    })
+
+    return;
+  });
+
 });

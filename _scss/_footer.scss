@@ -8,61 +8,151 @@
     justify-content: space-between;
     margin-bottom: 1em;
   }
-  .newsletter {
-    margin-bottom: 1em;
-  }
-  .signup-form {
-    display: flex;
-    font-size: 0.8em;
+}
+.newsletter {
+  margin-bottom: 1em;
+  position: relative;
 
-    @media (min-width: $breakpoint-xs) {
-      font-size: 1em;
-    }
-    .newsletter-field {
-      &-input {
-        flex: 1 1 auto;
+  .error-message {
+    background-color: var(--brandOrange);
+    opacity: 0;
+    padding: 0.5em;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    transition: visibility 0s linear 250ms, opacity 250ms;
+    visibility: hidden;
+    width: 100%;
 
-        input {
-          border-right: 0;
-        }
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--brandBlack);
       }
     }
-    input {
-      appearance: none;
-      background-color: var(--backgroundColor);
-      border: 1px solid var(--brandGray);
-      border-radius: 0;
-      color: var(--text-color);
-      padding: 0.9em;
-      width: 100%;
+  }
+  &.invalid {
+    .error-message {
+      opacity: 1;
+      visibility: visible;
+      transition: visibility 0s linear 0s, opacity 250ms;
+    }
+  }
+}
+.signup-form {
+  display: flex;
+  font-size: 0.8em;
 
-      &:focus,
-      &:focus-visible {
-        box-shadow: 0 0 10px var(--brandPink);
-        outline: none;
+  @media (min-width: $breakpoint-xs) {
+    font-size: 1em;
+  }
+  .newsletter-field {
+    &-input {
+      flex: 1 1 auto;
+
+      input {
+        border-right: 0;
       }
     }
-    .submit-button {
-      background: url(/assets/images/smiley.svg) no-repeat center/45%;
-      padding-right: 2em;
-      padding-left: 2em;
+  }
+  input {
+    appearance: none;
+    background-color: var(--backgroundColor);
+    border: 1px solid var(--brandGray);
+    border-radius: 0;
+    color: var(--text-color);
+    padding: 0.9em;
+    width: 100%;
+
+    &:focus,
+    &:focus-visible {
+      box-shadow: 0 0 10px var(--brandPink);
+      outline: none;
     }
   }
-  .privacy {
-    font-size: 0.8em;
+  .submit-button {
+    background: url(/assets/images/smiley.svg) no-repeat center/45%;
+    padding-right: 2em;
+    padding-left: 2em;
   }
-  .social-nav {
-    font-size: 1.4em;
+}
+.privacy {
+  font-size: 0.8em;
+}
+.social-nav {
+  font-size: 1.4em;
 
-    &-item {
-      padding: 0 0 0 0.8em;
+  &-item {
+    padding: 0 0 0 0.8em;
+  }
+}
+.legal {
+  font-size: 0.6em;
+
+  &, a, a:visited {
+    color: var(--brandGray);
+  }
+}
+
+// Newsletter Animation
+.headline,
+.contact {
+  transition: transform 1s ease;
+}
+.newsletter-success {
+  .section-info {
+    overflow: hidden;
+  }
+  .headline {
+    transform: translateX(-100%);
+  }
+  .contact {
+    transform: translateX(100%);
+  }
+  .newsletter-complete {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 1s linear 250ms;
+  }
+}
+.newsletter-complete {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  margin-bottom: 7em;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: visibility 0s linear 1s, opacity 500ms;
+  visibility: hidden;
+  width: 100%;
+  z-index: 9;
+
+  .inner {
+    margin-bottom: 7em;
+    position: relative;
+  }
+  h1 {
+    font-size: 4.5em;
+    line-height: 1;
+  }
+  .text-curve {
+    bottom: -5em;
+    font-size: 1.1em;
+    position: absolute;
+    right: -2em;
+    width: 10em;
+  }
+  @media (min-width: $breakpoint-md) {
+    h1 {
+      font-size: 10.5em;
     }
-  }
-  .legal {
-    font-size: 0.6em;
-
-    &, a, a:visited {
-      color: var(--brandGray);
+    .text-curve {
+      bottom: -6em;
+      right: 1em;
     }
   }
 }
