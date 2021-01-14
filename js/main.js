@@ -52,6 +52,7 @@ window.addEventListener('load', (e) => {
     scrollTrigger: {
       end: 'top 0%',
       // markers: true,
+      // pin: '.section-landing',
       scrub: true,
       start: 'top 90%',
       trigger: '.section-info'
