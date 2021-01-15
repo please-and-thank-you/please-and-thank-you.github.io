@@ -39,7 +39,6 @@ window.addEventListener('load', (e) => {
     rotate: -20,
     scrollTrigger: {
       end: 'top 0%',
-      // markers: true,
       scrub: true,
       start: 'top 100%',
       trigger: '.section-hero'
@@ -51,8 +50,6 @@ window.addEventListener('load', (e) => {
     opacity: 0,
     scrollTrigger: {
       end: 'top 0%',
-      // markers: true,
-      // pin: '.section-landing',
       scrub: true,
       start: 'top 90%',
       trigger: '.section-info'
@@ -63,12 +60,11 @@ window.addEventListener('load', (e) => {
   gsap.from('.hero-background', {
     ease: 'linear',
     opacity: 0,
-    y: '-100vh',
     scrollTrigger: {
       end: 'top 0%',
-      // markers: true,
       scrub: true,
       start: 'top 100%',
+      toggleClass: 'fixed',
       trigger: '.section-hero'
     }
   });
@@ -77,12 +73,11 @@ window.addEventListener('load', (e) => {
   gsap.from('.section-info .paty-logo', {
     ease: 'linear',
     opacity: 0,
-    y: '-25vh',
     scrollTrigger: {
       end: 'top 0%',
-      // markers: true,
       scrub: true,
       start: 'top 25%',
+      toggleClass: 'fixed',
       trigger: '.section-info'
     }
   });
@@ -93,7 +88,6 @@ window.addEventListener('load', (e) => {
     opacity: 0,
     scrollTrigger: {
       end: 'top 10%',
-      // markers: true,
       scrub: true,
       start: 'top 90%',
       trigger: '.contact'
@@ -106,7 +100,6 @@ window.addEventListener('load', (e) => {
     rotate: 45,
     scrollTrigger: {
       end: 'top 5%',
-      // markers: true,
       scrub: true,
       start: 'top 90%',
       trigger: '.contact'
@@ -134,7 +127,6 @@ window.addEventListener('load', (e) => {
       },
       success: function(data) {
         if (data.result != 'success') {
-          // console.log(data.msg);
           $('.newsletter').addClass('invalid');
           $('.error-message').html(data.msg);
         } else {
