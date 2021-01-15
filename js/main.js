@@ -36,7 +36,7 @@ window.addEventListener('load', (e) => {
     rotate: 0
   }, {
     ease: 'linear',
-    rotate: -20,
+    rotate: -40,
     scrollTrigger: {
       end: 'top 0%',
       scrub: true,
