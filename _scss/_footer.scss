@@ -87,6 +87,13 @@
   &-item {
     padding: 0 0 0 0.8em;
   }
+  svg {
+    display: inline-block;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    width: 0.875em;
+  }
 }
 .legal {
   font-size: 0.8em;
