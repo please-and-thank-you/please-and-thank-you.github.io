@@ -72,7 +72,10 @@
     }
   }
   .submit-button {
-    background: url(/assets/images/smiley.svg) no-repeat center/45%;
+    background-image: url($smiley);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
     cursor: pointer;
     padding-right: 2em;
     padding-left: 2em;
